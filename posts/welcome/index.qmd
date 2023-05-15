@@ -11,7 +11,7 @@ title-block-banner: true
 
 Hey there! My name is Suchit. I am a freshman studying Information Science (or CS, IS is just a marketing term here XD) at RIT, Bangalore.
 
-In this blog I hope to share my learnings, DOs and DON'Ts, and mostly tech stuff. My aim is to help the Suchit from a week or a month or an year ago, so that people going through the same problem/thoughts can gain better clarity. The added bonus is that I'll still be able to remember how I felt during that situation, therefore enabling me to provide you with help that'll actually help you.
+In this blog I hope to share my learnings and mostly tech stuff. My aim is to help the Suchit from a week or a month or an year ago, so that people going through the same problem/thoughts can gain better clarity. The added bonus is that I'll still be able to remember how I felt during that situation, therefore enabling me to provide you with help that'll actually help you.
 
 With that said, you can expect my blogs to be short and have hints of GenZ humour here and there.
 
