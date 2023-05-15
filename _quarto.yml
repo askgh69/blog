@@ -3,7 +3,8 @@ project:
   output-dir: docs
 
 website:
-  title: "Suchit writes?"
+  title: "AsquirousSpeaks"
+  favicon: favicon-16x16.png
   navbar:
     right:
       - about.qmd

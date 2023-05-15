@@ -2,23 +2,21 @@
 title: "Hey yo! Welcome to my blog peeps!"
 author: "Suchit G"
 date: "2023-05-15"
-image: "happysuchit.jpg"
+image: thumbnail.jpg
 description: "Hiya! Know more about my blog!"
 title-block-banner: true
 ---
+
+![](thumbnail.jpg)
 
 Hey there! My name is Suchit. I am a freshman studying Information Science (or CS, IS is just a marketing term here XD) at RIT, Bangalore.
 
 In this blog I hope to share my learnings, DOs and DON'Ts, and mostly tech stuff. My aim is to help the Suchit from a week or a month or an year ago, so that people going through the same problem/thoughts can gain better clarity. The added bonus is that I'll still be able to remember how I felt during that situation, therefore enabling me to provide you with help that'll actually help you.
 
-<center><img src="happysuchit.jpg" width="250px" alt="A picture of a happy Suchit"></center>
-<figcaption align="center" class="figure-caption">Happy Suchit :)</figcaption>
-
 With that said, you can expect my blogs to be short and have hints of GenZ humour here and there.
 
 Feel free to reach out to me through my socials:  
 Discord - LostSquid>.<#6436  
-Instagram - squid.0_0  
 LinkedIn - /in/suchitg04/  
 
 I hope to see you soon! Until then 👋
