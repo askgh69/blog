@@ -1,5 +1,4 @@
 ---
-# title: "iWrite"
 listing:
   contents: posts
   sort: "date desc"

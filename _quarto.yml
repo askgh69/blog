@@ -4,7 +4,7 @@ project:
 
 website:
   title: "AsquirousSpeaks"
-  favicon: favicon-16x16.png
+  favicon: favicon-32x32_vapor2.png
   navbar:
     right:
       - about.qmd
@@ -14,7 +14,7 @@ website:
         href: https://twitter.com
 format:
   html:
-    theme: solar
+    theme: vapor
     css: styles.css
 
 
