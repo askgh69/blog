@@ -1,0 +1,49 @@
+---
+title: "New to CS/tech? Here's my journey so far"
+author: "Suchit G"
+date: "2023-05-18"
+description: "It's been more than two years since the first time I got ~~lustfully 🤤~~ attracted to CS..."
+---
+
+We all wanna git gud at this whole programming thingy, have conversations related to that new technology and maybe participate in a hackathon some time soon, don't we?
+
+![Photo by <a href="https://unsplash.com/@chuckfortner?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Chuck Fortner</a> on <a href="https://unsplash.com/photos/LFVBohYmtgc?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>](chuck-fortner-LFVBohYmtgc-unsplash.jpg)
+
+I know how it feels to be among so many people talking tech and you not even having a remote idea of what they are talking about. Even after learning programming and tinkering with tech for more than two years, I still feel the same when I come across some new tool or technology.
+
+### Wannabe physicist
+
+How did I start, you ask? Well, I did not really "start". It just happened. In fact, I wanted to major in Physics and become an astrophysicist. Me and one of my best friends were like science duos making projects learning about quantum particles and the whole thing. But then boom, I come across a single board computer called Raspberry Pi. It's a mini-computer sort of a thing, if you are curious.
+
+Oh wait, but it doesn't run your normal Windows, it uses Linux as its OS and it turns out that you can make stuff like a VPN server, AdBlocker, security camera and more such cool projects! But then you'll have to know about getting around Linux and learning terminal commands. That's what I did!
+
+### Wannabe C whiz
+
+I then got another board (Arduino UNO) for no reason. Oh, what is this? I need to be a C pro to use this, is what my noob self thought. I then bought a C course from Udemy (which I didn't even get halfway through btw). That course just wasn't interesting for me.
+
+### Wannabe Linux whiz
+
+👀 I saw some cool (internet) people talking about using Linux on their computer! They were using it alongside Windows by dual booting, it seems. Now, I leave all my exam preparations and get on installing Linux on my laptop. And guess which distro I chose to get started with?
+
+Arch Linux. Yes, out of all the distros out there I chose Arch (the path to masochism). Considered by many to be the toughest Linux distro to get started with. Humblebragging? Yes, a little.
+
+Legend has it that Suchit is still trying to customize his OS to the core and taking his masochism to the next level.
+
+### What am I doing now?
+
+I'm glad you asked. I'm hella confused. I'm confused if I'm juggling too many balls with my two hands.
+
+I'm learning deep learning alongside web development and DSA. I also felt it is the right time to start blogging because bRo YoU dOn'T hAvE mUcH tO dO, right? ... right? 🙂
+
+But then I find solace in the fact that not everyone has it all figured out (at least that's what they say).
+
+------------------------------------------------------------------------
+
+I'm still in the process of figuring out and organizing my shit. Join me in this journey, so that we can figure it out together.
+
+Thank you for reading my blog. You can reach out to me through my socials here:
+
+-   Discord - LostSquid\>.\<#6436
+-   LinkedIn - /in/suchitg04/
+
+I hope to see you soon. Until then 👋
