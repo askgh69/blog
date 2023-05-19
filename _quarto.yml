@@ -3,6 +3,7 @@ project:
   output-dir: docs
 
 website:
+  google-analytics: "G-3FN26ZGN6Q"
   title: "AsquirousSpeaks"
   favicon: favicon-32x32_vapor2.png
   navbar:
