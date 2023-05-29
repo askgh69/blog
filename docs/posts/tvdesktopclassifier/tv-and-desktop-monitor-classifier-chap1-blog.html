@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="dcterms.date" content="2023-05-29">
+<meta name="description" content="Get a taste of AI/deep learning with this simple tutorial that trains an image classifier model!">
 
-<title>AsquirousSpeaks - 1. Introduction</title>
+<title>AsquirousSpeaks - Train your first image classifier (AI) model!</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -112,7 +114,7 @@ gtag('config', 'G-3FN26ZGN6Q', { 'anonymize_ip': true});
 <link rel="stylesheet" href="../../styles.css">
 </head>
 
-<body class="nav-fixed fullcontent">
+<body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -154,14 +156,25 @@ gtag('config', 'G-3FN26ZGN6Q', { 'anonymize_ip': true});
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">1. Introduction</h1>
-                      </div>
+      <h1 class="title">Train your first image classifier (AI) model!</h1>
+                  <div>
+        <div class="description">
+          Get a taste of AI/deep learning with this simple tutorial that trains an image classifier model!
+        </div>
+      </div>
+                </div>
   </div>
     
   
   <div class="quarto-title-meta">
 
       
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">May 29, 2023</p>
+      </div>
+    </div>
     
       
     </div>
@@ -170,18 +183,39 @@ gtag('config', 'G-3FN26ZGN6Q', { 'anonymize_ip': true});
   </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">1. Introduction</a></li>
+  <li><a href="#installing-modules" id="toc-installing-modules" class="nav-link" data-scroll-target="#installing-modules">2. Installing modules</a></li>
+  <li><a href="#glimpsing-our-data" id="toc-glimpsing-our-data" class="nav-link" data-scroll-target="#glimpsing-our-data">3. Glimpsing our data</a></li>
+  <li><a href="#downloading-images" id="toc-downloading-images" class="nav-link" data-scroll-target="#downloading-images">4. Downloading images</a></li>
+  <li><a href="#training-our-model" id="toc-training-our-model" class="nav-link" data-scroll-target="#training-our-model">5. Training our model!</a></li>
+  <li><a href="#classifying-images" id="toc-classifying-images" class="nav-link" data-scroll-target="#classifying-images">6. Classifying images</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
 <main class="content quarto-banner-title-block" id="quarto-document-content">
 
 
 
 
-<p>Want to get hands-on experience with AI? If so, this is the perfect tutorial for you!<br> Pre-requisites for this tutorial: - beginner-level python - be able to use jupyter notebooks - a Kaggle account (go create one duh)</p>
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">1. Introduction</h2>
+<p>Want to get hands-on experience with AI? If so, this is the perfect tutorial for you!<br> Pre-requisites for this tutorial:</p>
+<ul>
+<li>beginner-level python</li>
+<li>be able to use jupyter notebooks</li>
+<li>a Kaggle account (go create one duh)</li>
+</ul>
 <p>That’s all! If you don’t know how to use Jupyter notebooks, click <a href="https://www.kaggle.com/code/jhoward/jupyter-notebook-101">here</a> for a quick tutorial on both Jupyter notebooks and Kaggle.</p>
 <p>So what exactly will be creating in this tutorial? We are gonna train a Deep Learning model to identify if a given image is a CRT TV or a flat screen TV or a desktop monitor. We will be using a beginner friendly and widely used library called <strong>fastai</strong>. Sounds damn cool, at least to me :)</p>
 <p><strong>Note 1</strong>: You need not break your head over what each line of code does. This tutorial is meant to give you impetus to delve into Deep Learning and a top level overview of it’s power :)<br>
 <strong>Note 2</strong>: GPU needs to be enabled for this tutorial or you’ll be spending hours training the model 😂. Specifically enable GPU P100. Also, to use GPUs you need to have your phone number verified, so go do that if you haven’t yet.</p>
+</section>
 <section id="installing-modules" class="level2">
 <h2 class="anchored" data-anchor-id="installing-modules">2. Installing modules</h2>
 <p>Here, we will be installing/updating the python modules necessary for this tutorial.</p>
@@ -440,8 +474,10 @@ Downloading: "https://download.pytorch.org/models/resnet18-f37072fd.pth" to /roo
 </table>
 </div>
 </div>
-<section id="congratulations-you-have-trained-your-first-ig-image-classification-model-let-us-now-put-it-to-test-and-try-classifying-some-images." class="level4">
-<h4 class="anchored" data-anchor-id="congratulations-you-have-trained-your-first-ig-image-classification-model-let-us-now-put-it-to-test-and-try-classifying-some-images.">Congratulations! You have trained your first (ig 🤷) image classification model! Let us now put it to test and try classifying some images.</h4>
+</section>
+<section id="classifying-images" class="level2">
+<h2 class="anchored" data-anchor-id="classifying-images">6. Classifying images</h2>
+<p>Congratulations! You have trained your first (ig 🤷) image classification model! Let us now put it to test and try classifying some images.</p>
 <div class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2023-05-29T15:17:33.578892Z&quot;,&quot;iopub.status.busy&quot;:&quot;2023-05-29T15:17:33.578350Z&quot;,&quot;iopub.status.idle&quot;:&quot;2023-05-29T15:17:33.795479Z&quot;,&quot;shell.execute_reply&quot;:&quot;2023-05-29T15:17:33.794277Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2023-05-29T15:17:33.578836Z&quot;}" data-trusted="true" data-execution_count="15">
 <div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Predicting an image we had downloaded earlier</span></span>
 <span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>learn.predict(PILImage.create(<span class="st">'crttv.jpg'</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -540,9 +576,8 @@ Downloading: "https://download.pytorch.org/models/resnet18-f37072fd.pth" to /roo
 <pre><code>('desktop monitor', tensor(1), tensor([5.4398e-05, 9.9916e-01, 7.8518e-04]))</code></pre>
 </div>
 </div>
-</section>
-<section id="well-thats-not-bad-for-our-first-model.-it-has-a-decent-accuracy.-for-me-it-got-23-predictions-right." class="level4">
-<h4 class="anchored" data-anchor-id="well-thats-not-bad-for-our-first-model.-it-has-a-decent-accuracy.-for-me-it-got-23-predictions-right.">Well, that’s not bad for our first model. It has a decent accuracy. For me, it got 2/3 predictions right.</h4>
+<p>Well, that’s not bad for our first model. It has a decent accuracy. For me, it got 2/3 predictions right.<br>
+If you have any questions don’t hesitate to message me on discord. And lastly, <a href="https://www.kaggle.com/code/suchitg04/tv-and-desktop-monitor-classifier-chap1-blog">here’s</a> the link to my notebook if you wannaplay around with it (click on the “copy and edit button”).</p>
 <p>Thank you for reading my blog. You can reach out to me through my socials here:</p>
 <ul>
 <li>Discord - LostSquid&gt;.&lt;#6436</li>
@@ -551,7 +586,6 @@ Downloading: "https://download.pytorch.org/models/resnet18-f37072fd.pth" to /roo
 <p>I hope to see you soon. Until then 👋</p>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
