@@ -1,7 +1,6 @@
 ---
 title: "New to CS/tech? Here's my journey so far"
 toc: true
-author: "Suchit G"
 date: "2023-05-18"
 description: "It's been more than two years since the first time I got ~~lustfully 🤤~~ attracted to CS..."
 ---

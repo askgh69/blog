@@ -1,6 +1,5 @@
 ---
 title: "Hey yo! Welcome to my blog peeps!"
-author: "Suchit G"
 date: "2023-05-15"
 image: thumbnail.jpg
 description: "Hiya! Know more about my blog!"
