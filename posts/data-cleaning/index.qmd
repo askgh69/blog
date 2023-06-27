@@ -1,7 +1,7 @@
 ---
 title: "Data Cleaning and Augmentation"
 toc: true
-date: "2023-06-26"
+date: "2023-06-27"
 description: "The counter-intuitive idea of data cleaning after training a model and creating data by ourselves."
 mainfont: "Arial"
 image: "./pexels-elīna-arāja-3336523.jpg"
