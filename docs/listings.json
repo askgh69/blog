@@ -2,6 +2,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/data-cleaning/index.html",
       "/posts/tvdesktopclassifier/tv-and-desktop-monitor-classifier-chap1-blog.html",
       "/posts/my-journey/index.html",
       "/posts/welcome/index.html"

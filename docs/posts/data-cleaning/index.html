@@ -6,10 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2023-05-18">
-<meta name="description" content="It’s been more than two years since the first time I got lustfully 🤤 attracted to CS…">
+<meta name="dcterms.date" content="2023-06-26">
+<meta name="description" content="The counter-intuitive idea of data cleaning after training a model and creating data by ourselves.">
 
-<title>AsquirousSpeaks - New to CS/tech? Here’s my journey so far</title>
+<title>AsquirousSpeaks - Data Cleaning and Augmentation</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -118,10 +118,10 @@ gtag('config', 'G-3FN26ZGN6Q', { 'anonymize_ip': true});
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">New to CS/tech? Here’s my journey so far</h1>
+      <h1 class="title">Data Cleaning and Augmentation</h1>
                   <div>
         <div class="description">
-          It’s been more than two years since the first time I got <del>lustfully 🤤</del> attracted to CS…
+          The counter-intuitive idea of data cleaning after training a model and creating data by ourselves.
         </div>
       </div>
                 </div>
@@ -134,7 +134,7 @@ gtag('config', 'G-3FN26ZGN6Q', { 'anonymize_ip': true});
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">May 18, 2023</p>
+        <p class="date">June 26, 2023</p>
       </div>
     </div>
     
@@ -150,10 +150,8 @@ gtag('config', 'G-3FN26ZGN6Q', { 'anonymize_ip': true});
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#wannabe-physicist" id="toc-wannabe-physicist" class="nav-link active" data-scroll-target="#wannabe-physicist">Wannabe physicist</a></li>
-  <li><a href="#wannabe-c-whiz" id="toc-wannabe-c-whiz" class="nav-link" data-scroll-target="#wannabe-c-whiz">Wannabe C whiz</a></li>
-  <li><a href="#wannabe-linux-whiz" id="toc-wannabe-linux-whiz" class="nav-link" data-scroll-target="#wannabe-linux-whiz">Wannabe Linux whiz</a></li>
-  <li><a href="#what-am-i-doing-now" id="toc-what-am-i-doing-now" class="nav-link" data-scroll-target="#what-am-i-doing-now">What am I doing now?</a></li>
+  <li><a href="#data-cleaning" id="toc-data-cleaning" class="nav-link active" data-scroll-target="#data-cleaning">Data Cleaning</a></li>
+  <li><a href="#data-augmentation" id="toc-data-augmentation" class="nav-link" data-scroll-target="#data-augmentation">Data Augmentation</a></li>
   </ul>
 </nav>
     </div>
@@ -163,39 +161,32 @@ gtag('config', 'G-3FN26ZGN6Q', { 'anonymize_ip': true});
 
 
 
-<p>We all wanna git gud at this whole programming thingy, have conversations related to that new technology and maybe participate in a hackathon some time soon, don’t we?</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="chuck-fortner-LFVBohYmtgc-unsplash.jpg" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Photo by <a href="https://unsplash.com/@chuckfortner?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Chuck Fortner</a> on <a href="https://unsplash.com/photos/LFVBohYmtgc?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></figcaption>
-</figure>
-</div>
-<p>I know how it feels to be among so many people talking tech and you not even having a remote idea of what they are talking about. Even after learning programming and tinkering with tech for more than two years, I still feel the same when I come across some new tool or technology.</p>
-<section id="wannabe-physicist" class="level3">
-<h3 class="anchored" data-anchor-id="wannabe-physicist">Wannabe physicist</h3>
-<p>How did I start, you ask? Well, I did not really “start”. It just happened. In fact, I wanted to major in Physics and become an astrophysicist. Me and one of my best friends were like science duos making projects learning about quantum particles and the whole thing. But then boom, I come across a single board computer called Raspberry Pi. It’s a mini-computer sort of a thing, if you are curious.</p>
-<p>Oh wait, but it doesn’t run your normal Windows, it uses Linux as its OS and it turns out that you can make stuff like a VPN server, AdBlocker, security camera and more such cool projects! But then you’ll have to know about getting around Linux and learning terminal commands. That’s what I did!</p>
+<section id="data-cleaning" class="level2">
+<h2 class="anchored" data-anchor-id="data-cleaning">Data Cleaning</h2>
+<p>It is a pretty intuitive thought that data is cleaned before training a model so that the model achieves good accuracy. What’s data cleaning in the first place? Naively, it is removing unrelated data that might have creeped through or removing data unrelated to what the model needs in training. I believe you get my point.</p>
+<p>Let’s take an example of a model that you are building to, say, classify between the faces of Elon Musk and Mark Zuckerberg. You’ll probably download the images for your dataset from Google or Bing or any such search engines. With Mark rumored to be an alien and people taking a huge liking to the “female version” of Elon, it is very certain that your dataset will contain a few such memes.</p>
+<img src="./mark-alien.jpg" alt="AI generated image of Mark Zuckerberg appearing to be an alien" width="300">
+<figcaption>
+Alien Zuckerberg
+</figcaption>
+<img src="./elon-female.png" alt="AI generated image of a female-version of Elon Musk" width="300">
+<figcaption>
+Elona Musk
+</figcaption>
+<p>Now, sifting through the data in the hopes of finding such memes can be tedious. How about we let the model decide what images are faulty? Here’s how it works. You quickly train a model, the “losses” and accuracies get recorded, and then you pop up some images in decreasing order of “loss” and/or accuracy (there are some tools already that can do that). There you go, the model now helped you find some black sheeps in your data that the it found difficult to classify and/or has low confidence about.</p>
 </section>
-<section id="wannabe-c-whiz" class="level3">
-<h3 class="anchored" data-anchor-id="wannabe-c-whiz">Wannabe C whiz</h3>
-<p>I then got another board (Arduino UNO) for no reason. Oh, what is this? I need to be a C pro to use this, is what my noob self thought. I then bought a C course from Udemy (which I didn’t even get halfway through btw). That course just wasn’t interesting for me.</p>
-</section>
-<section id="wannabe-linux-whiz" class="level3">
-<h3 class="anchored" data-anchor-id="wannabe-linux-whiz">Wannabe Linux whiz</h3>
-<p>👀 I saw some cool (internet) people talking about using Linux on their computer! They were using it alongside Windows by dual booting, it seems. Now, I leave all my exam preparations and get on installing Linux on my laptop. And guess which distro I chose to get started with?</p>
-<p>Arch Linux. Yes, out of all the distros out there I chose Arch (the path to masochism). Considered by many to be the toughest Linux distro to get started with. Humblebragging? Yes, a little.</p>
-<p>Legend has it that Suchit is still trying to customize his OS to the core and taking his masochism to the next level.</p>
-</section>
-<section id="what-am-i-doing-now" class="level3">
-<h3 class="anchored" data-anchor-id="what-am-i-doing-now">What am I doing now?</h3>
-<p>I’m glad you asked. I’m hella confused. I’m confused if I’m juggling too many balls with my two hands.</p>
-<p>I’m learning deep learning alongside web development and DSA. I also felt it is the right time to start blogging because bRo YoU dOn’T hAvE mUcH tO dO, right? … right? 🙂</p>
-<p>But then I find solace in the fact that not everyone has it all figured out (at least that’s what they say).</p>
-<hr>
-<p>I’m still in the process of figuring out and organizing my shit. Join me in this journey, so that we can figure it out together.</p>
+<section id="data-augmentation" class="level2">
+<h2 class="anchored" data-anchor-id="data-augmentation">Data Augmentation</h2>
+<p>The world’s gone dystopian and governments are crumbling, and Elon and Mark have decided to collaborate and take advantage of this calamity. You are the hero in this situation.</p>
+<p>You observe that there is a lot of movement in and out of the abandoned Twitter office (Elon’s selling tickets to Mars to the elites lol). Looks like someone’s having some in-person meetings 🤨. Now you install a camera along with a image/video recognition model to alert you whenever Elon or Mark comes and goes in/out of the office, but you don’t get a single trigger for days!</p>
+<p>You scratch your head thinking about what could be wrong for hours until you realise that you had trained the model using just headshots and few such “presentable” images that you scavenged from what’s left of the internet, but you have installed your camera in such a place that it does not get such good images.</p>
+<p>What’s the solution you may ask? This is where Data Augmentation comes into the picture. You use this technique and apply certain effects on the images like cropping of random parts of the image, applying different colour filters, distorting the image, etc. Not only does this expand the dataset, but it also enables the model to better understand the object it is learning (Elon and Mark, in this case).</p>
+<p>Here’s an example of what data augmentation does: <img src="./data-aug.png" width="500"></p>
+<p>Data augmentation is particularly useful when you have a small dataset. It helps bring some variance and helps avoid overfitting if done properly. Give this interesting article a read: <a href="https://towardsdatascience.com/balancing-the-regularization-effect-of-data-augmentation-eb551be48374">Regularization Effect of Data Augmentation</a>.</p>
+<p>Cover photo by <a href="https://www.pexels.com/photo/black-and-white-collage-of-eyes-3336523/">Elīna Arāja</a>.</p>
 <p>Thank you for reading my blog. You can reach out to me through my socials here:</p>
 <ul>
-<li>Discord - LostSquid&gt;.&lt;#6436</li>
+<li>Discord - “lostsquid.”</li>
 <li>LinkedIn - /in/suchitg04/</li>
 </ul>
 <p>I hope to see you soon. Until then 👋</p>
