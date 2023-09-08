@@ -15,8 +15,7 @@ website:
         href: https://twitter.com/asquirous/
 format:
   html:
-    theme: vapor
+    theme:
+      light: flatly
+      dark: darkly
     css: styles.css
-
-
-
