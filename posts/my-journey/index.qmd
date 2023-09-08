@@ -2,7 +2,12 @@
 title: "New to CS/tech? Here's my journey so far"
 toc: true
 date: "2023-05-18"
+author: "Suchit G"
 description: "It's been more than two years since the first time I got ~~lustfully 🤤~~ attracted to CS..."
+categories:
+    - Experience
+    - Advice
+    - Journey
 ---
 
 We all wanna git gud at this whole programming thingy, have conversations related to that new technology and maybe participate in a hackathon some time soon, don't we?
