@@ -219,7 +219,14 @@ gtag('config', 'G-3FN26ZGN6Q', { 'anonymize_ip': true});
 
 <section id="introduction" class="level2">
 <h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
-<p>From MNIST being the first Machine Learning dataset <a href="https://youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi&amp;si=DCyrqxpwpuNR72xJ">I heard about</a> to building a model for it, I can surely say Machine Learning is a fascinating subject to study! Building a “model” is more than just getting a model and training it. It involves: - Getting the data - Preprocessing the data, i.e., cleaning it, converting it into a format that the model can understand, etc. - Creating the training, validation, and test (test data is not considered in this case) split - Training the model - Fine-tuning hyper-parameters based on the inferences gotten from the accuracy and other metrics over the validation dataset, and then improving the model (not done in this case)</p>
+<p>From MNIST being the first Machine Learning dataset <a href="https://youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi&amp;si=DCyrqxpwpuNR72xJ">I heard about</a> to building a model for it, I can surely say Machine Learning is a fascinating subject to study! Building a “model” is more than just getting a model and training it. It involves:</p>
+<ul>
+<li>Getting the data</li>
+<li>Preprocessing the data, i.e., cleaning it, converting it into a format that the model can understand, etc.</li>
+<li>Creating the training, validation, and test (test data is not considered in this case) split</li>
+<li>Training the model</li>
+<li>Fine-tuning hyper-parameters based on the inferences gotten from the accuracy and other metrics over the validation dataset, and then improving the model (not done in this case)</li>
+</ul>
 <p>Given above is the rough process of building a Machine Learning project. This project maintains a medium level of abstraction and doesn’t entirely utilize high-level functions but doesn’t go deep into the low-level implementations either. I aim to maintain an understandable and yet not-so-abstracted level of coding throughout. Let’s get started!</p>
 <div class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -231,7 +238,13 @@ Important
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>If you are referring to this post as a guide, then you are expected to have the following pre-requisites to fully and deeply understand what’s going on: - Basics of Python - Importing modules, methods and calling them in Python - A fundamental idea of how a typical Linear Regression model works (knowledge of simple neural networks recommended but not necessary) - Willingness and the ability to google and read through documentation ;)</p>
+<p>If you are referring to this post as a guide, then you are expected to have the following pre-requisites to fully and deeply understand what’s going on:</p>
+<ul>
+<li>Basics of Python</li>
+<li>Importing modules, methods and calling them in Python</li>
+<li>A fundamental idea of how a typical Linear Regression model works (knowledge of simple neural networks recommended but not necessary)</li>
+<li>Willingness and the ability to google and read through documentation ;)</li>
+</ul>
 </div>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
@@ -261,7 +274,12 @@ Tip
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>If I have trouble understanding a piece of code written by others, here’s what I do: - Try to speak out loudly and explain the code to myself (rubber ducking). - Search the official docuementation or stack overflow and understand through examples. - If the above two approaches don’t work, then ask ChatGPT to explain the code to me. This step works no matter what!</p>
+<p>If I have trouble understanding a piece of code written by others, here’s what I do:</p>
+<ul>
+<li>Try to speak out loudly and explain the code to myself (rubber ducking).</li>
+<li>Search the official docuementation or stack overflow and understand through examples.</li>
+<li>If the above two approaches don’t work, then ask ChatGPT to explain the code to me. This step works no matter what!</li>
+</ul>
 </div>
 </div>
 <div class="cell" data-execution_count="1">
@@ -316,7 +334,7 @@ torch.Size([60000, 28, 28])</code></pre>
 </section>
 <section id="train-val-split-and-normalization" class="level2">
 <h2 class="anchored" data-anchor-id="train-val-split-and-normalization">2. Train-Val split and Normalization</h2>
-<p>Here, we use <a href="https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.train_test_split.html"><code>sklearn.model_selection.train_test_split</code></a> to split the data into training and validation datasets. But what is a validation dataset? When we train the model, we improve it by looking at the loss calculated on training set itself (insert reference). But the accuracy (in this case, how many digits the model gets right) is calculated by inputting the images from the validation dataset into the model. That way, we can know how well the model performs on images that it hasn’t seen before. If the validation is significantly higher than the training loss (insert reference), then that indicates a case of <a href="https://miro.medium.com/v2/resize:fit:1125/1*_7OPgojau8hkiPUiHoGK_w.png">overfitting</a>.</p>
+<p>Here, we use <a href="https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.train_test_split.html"><code>sklearn.model_selection.train_test_split</code></a> to split the data into training and validation datasets. But what is a validation dataset? When we train the model, we improve it by looking at the loss calculated on training set itself. But the accuracy (in this case, how many digits the model gets right) is calculated by inputting the images from the validation dataset into the model. That way, we can know how well the model performs on images that it hasn’t seen before. If the validation is significantly higher than the training loss, then that indicates a case of <a href="https://miro.medium.com/v2/resize:fit:1125/1*_7OPgojau8hkiPUiHoGK_w.png">overfitting</a>.</p>
 <p>It is also worth noting that, here, we create a stratified train-val split. What that means is that the number of images from each class is roughly equal. This ensures that the model will be equally good in classifying all digits.</p>
 <div class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>train_x, valid_x, train_y, valid_y <span class="op">=</span> train_test_split(dset.data, dset.targets, test_size<span class="op">=</span><span class="fl">0.2</span>, stratify<span class="op">=</span>dset.targets)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
