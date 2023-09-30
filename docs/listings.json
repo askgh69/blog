@@ -2,9 +2,9 @@
   {
     "listing": "/index.html",
     "items": [
-      "/posts/mnist/mnist.html",
+      "/posts/mnist/index.html",
       "/posts/data-cleaning/index.html",
-      "/posts/tvdesktopclassifier/tv-and-desktop-monitor-classifier-chap1-blog.html",
+      "/posts/tvdesktopclassifier/index.html",
       "/posts/my-journey/index.html",
       "/posts/welcome/index.html"
     ]
